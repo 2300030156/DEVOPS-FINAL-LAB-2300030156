@@ -29,8 +29,8 @@ jobs:
       - name: Build and Push Backend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./2300030156-FINAL-BACKEND
-          file: ./2300030156-FINAL-BACKEND/backend.Dockerfile
+          context: ./2300030156-final-backend
+          file: ./2300030156-final-backend/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/2300030156-FINAL-BACKEND:latest
 
@@ -38,7 +38,7 @@ jobs:
       - name: Build and Push Frontend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./2300030156-FINAL-FRONTEND
-          file: ./2300030156-FINAL-FRONTEND/frontend.Dockerfile
+          context: ./2300030156-final-frontend
+          file: ./2300030156-final-frontend/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/2300030156-FINAL-FRONTEND:latest
